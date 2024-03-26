@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forkify-Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap-icons/icons/"> -->
+<style>
+   
+</style>
+
+</head>
+<body>
+    <div class="app-container rounded p-0 mx-auto mt-5">
+       <header class="rounded-top ">
+          <div class="logo">
+          <img src="https://forkify-v2.netlify.app/logo.09084f39.png"  alt="" height="40px" width="100px">
+          </div>
+          <div class="search-bar">
+            <input type="text" placeholder="search over 1,00,000 recipes" id="qurrey">
+            <button id="searchBtn">
+                <img src="node_modules/bootstrap-icons/icons/search.svg" alt="">
+                Search</button>
+          </div>
+          <div class="recipe-adder d-flex">
+           <div class="recipieAdd me-4 control-btn">
+            <img src="node_modules/bootstrap-icons/icons/pencil-square.svg" alt="" class="me-1">Add
+           </div>
+           <div class="bookMark control-btn">
+           <img src="node_modules/bootstrap-icons/icons/bookmark.svg" alt="" class="me-1">BookMarks
+           </div>
+          </div>
+       </header>
+       <div class="app row g-0 h-100">
+         <div class="col-4 p-2 ">
+            <div class="recipes bg-light">
+
+            </div>
+            <!-- recipe row container -->
+            <!-- <div class="recipe row m-0">
+                <div class="img-container col-3 d-flex align-items-center justify-content-center">
+                   <img src="https://cdn.photographylife.com/wp-content/uploads/2014/09/Nikon-D750-Image-Samples-2.jpg" alt="" id="recipeimg" class="mt-1 me-2 img-fluid">
+                </div>
+                <div class="recipe-details col-9" >
+                   <h5 id="recipeTitle">hello</h5>
+                   <p id="recipePublisher" class="text-body-secondary">book my show</p>
+                </div>
+            </div> -->
+            <!--  -->
+            <div class="buttons mx-4 my-4">
+               <!-- <div class="btn--inline btn-previous">
+                <img src="node_modules/bootstrap-icons/icons/arrow-left.svg" alt="">  page1
+               </div>
+               <div class="btn--inline btn-next">
+                  page2 <img src="node_modules/bootstrap-icons/icons/arrow-right.svg" alt=""> 
+               </div> -->
+            </div>
+         </div>
+         <div class="col-8">
+         <div class="recipieDescription">
+          <div class="dummytext w-75 text-center d-block mx-auto mt-5">
+            <h5><img src="node_modules/bootstrap-icons/icons/emoji-smile.svg" alt="" class="me-2">Start by searching for a recipe or an ingredient. Have fun!</h5>
+          </div>
+       </div>
+      </div>
+    </div>
+    <script src="app.js" type="module"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

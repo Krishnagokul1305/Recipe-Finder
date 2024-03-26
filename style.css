@@ -1,0 +1,202 @@
+:root {
+    --main-bg: linear-gradient(to right bottom, #fbdb89, #f48982);
+    --app-bg:#f9f5f3;
+    --menu-bg:white;
+    --primary-text:white;
+    --secondary-text:#f48982;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background:var(--main-bg) ;
+    padding: 30px;
+}
+.app-container{
+    min-height: 110vh;
+    overflow: hidden;
+    background-color:var(--app-bg) ;
+    max-width: 130vh;
+}
+header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+}
+.search-bar{
+    background-color: var(--menu-bg);
+    height: 40px;
+    display: flex;
+    border-radius: 30px;
+    transition: .5s ease;
+
+}
+.search-bar:hover{
+    transform: translateY(-1px);
+    box-shadow: 5px 3px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.search-bar input{
+    border-radius: 30px 0px 0px 30px;
+    outline: none;
+    border: 0cap;
+    padding: 0px 40px;
+    font-size: small;
+}
+.search-bar button{
+    border-radius: 30px;
+    outline: none;
+    border: 0cap;
+    background:  var(--main-bg);
+    color: var(--menu-bg);
+    padding: 0px 20px;
+    font-size: small;
+    transition: .5s ease;
+}
+.search-bar button:hover{
+    transform: scale(1.05);
+}
+.control-btn{
+    padding: 20px;
+    font-size: small;
+    transition: .5s ease;
+    cursor: pointer;
+}
+.control-btn:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.recipes{
+background-color: var(--menu-bg);
+min-height: 100vh;
+}
+.recipe{
+    padding:5px 25px;
+    margin-bottom: 10px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+.recipe:hover{
+    background-color: rgba(235, 134, 127, 0.082);
+    transform: translateY(-5px);
+}
+#recipeimg{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
+#recipeTitle{
+    color: var(--secondary-text);
+    margin-top: 10px;
+    font-size:18px ;
+}
+#recipePublisher{
+    color: gray;
+    font-size:small;
+}
+.recipe-img{
+height: 400px;
+}
+.recipe-img img{
+    height: 100%;
+    width: 100%;
+}
+.recipe-title{
+    background: var(--main-bg);
+    width: fit-content;
+    padding:10px 30px;
+    color: var(--primary-text);
+    font-size: larger;
+    font-weight: 700;
+    transform: translateY(-25px) ;
+}
+.controlericon{
+cursor: pointer;
+}
+.recipeDuration svg{
+ color: var(--secondary-text);
+}
+.recipeDuration{
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+}
+#bookmarkbtn{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-text);
+    border-radius: 50%;
+    background:  var(--main-bg);
+    cursor: pointer;
+}
+#recipeIngrident{
+    color: var(--secondary-text);
+    margin-top: 20px;
+    background-color: #fcfcfc;
+    padding: 20px;
+}
+li{
+    color: rgb(80, 80, 80);
+    display: flex;
+    align-items: center;
+}
+ul{
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+li p{
+     margin: auto 0px 0px 6px;
+}
+.controler{
+    cursor: pointer;
+}
+.title{
+    color: var(--secondary-text);
+}
+.publiserlink{
+    border-radius: 20px;
+    padding: 10px;
+    color: var(--menu-bg);
+    background: var(--main-bg);
+    outline: none;
+    border: none;
+    text-decoration: none;
+    width: 150px;
+    transition: .5s ease;
+    margin: 10px 0px;
+}
+.publiserlink:hover {
+    background-color: rgba(235, 134, 127, 0.082);
+    transform: translateY(-3px);
+}
+.spinner img{
+    transition: 1s ease;
+    animation:spin 2s ease-in-out infinite;
+  }
+  @keyframes spin{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  .dummytext{
+    color: var(--secondary-text);;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+  }
+  .buttons .btn--inline{
+      background: var(--main-bg) !important;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 10px;
+      color: var(--primary-text);
+      cursor: pointer;
+  }
