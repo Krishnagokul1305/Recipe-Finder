@@ -200,3 +200,27 @@ li p{
       color: var(--primary-text);
       cursor: pointer;
   }
+ .recipe a{
+ text-decoration: none;
+}
+.recipe-adder:hover .bookMarkcontainer{
+    display: block;
+}
+.bookMarkcontainer{
+     max-height: 400px;
+     width: 350px;
+     background-color: #c1c1c1db;
+    position: absolute;
+    display: none;
+    top: 57px;
+    right: 1px;
+    z-index: 100;
+    overflow-y: scroll;
+    transition: .5s ease;
+}
+.bookMarkcontainer .recipe{
+    background-color: #f2f1f1;
+}
+.search-active{
+    background-color: rgba(235, 134, 127, 0.082);
+}

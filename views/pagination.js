@@ -5,9 +5,6 @@ class paginationView extends View{
     generateMarkup(){
         const pageNo=this._data
         const noOfPages=Math.ceil(state.searchResults.results.length/state.searchResults.resultsPerPage)
-        console.log(noOfPages)
-        // if(){
-
             if(pageNo==1){
                 return `
                 <div class="btn--inline btn-next" data-goto=${pageNo+1}>

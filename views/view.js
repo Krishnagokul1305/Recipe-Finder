@@ -7,9 +7,24 @@ export default class View {
         const markup = this.generateMarkup();
         this.clear();
         this._parentElement.insertAdjacentHTML('afterbegin', markup);
-        console.log(this._data)
     }
-
+    update(data){
+        this._data=data;
+        const markup = this.generateMarkup();
+        const newDOM=document.createRange().createContextualFragment(markup)
+        const newEL=newDOM.querySelectorAll('*')
+        const oldEl=this._parentElement.querySelectorAll('*')
+        newEL.forEach((el,index)=>{
+            let currentEl=oldEl[index]
+            if(!el.isEqualNode(currentEl)) {
+                currentEl.innerHTML=el.innerHTML
+            }
+            if(!el.isEqualNode(currentEl)) 
+            Array.from(el.attributes).forEach(attr=>{
+        currentEl.setAttribute(attr.name,attr.value)})
+        })
+        
+    }
     clear() {
         this._parentElement.innerHTML = '';
     }

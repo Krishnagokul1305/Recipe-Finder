@@ -9,11 +9,12 @@ class SearchResults extends View {
     }
 
     generateMarkup() {
-    //    console.log(this._data)
        return this._data.map(res=>this.markupUi(res)).join('')
     }
     markupUi(result){
-        return `<div class="recipe row m-0" href="#${result.recipeId}">
+        const id=window.location.hash.slice(1)
+        return `<div class="recipe m-0 ${result.recipeId==id?'search-active':''}">
+        <a href="#${result.recipeId}" class="row">
         <div class="img-container col-3 d-flex align-items-center justify-content-center">
             <img src="${result.recipeimg}" alt="" id="recipeimg" class="mt-1 me-2">
         </div>
@@ -21,6 +22,7 @@ class SearchResults extends View {
             <h5 id="recipeTitle">${result.recipeTitle}</h5>
             <p id="recipePublisher" class="text-body-secondary">${result.recipiePublisher}</p>
         </div>
+        </a>
     </div>`;
     }
 

@@ -1,4 +1,5 @@
 import view from "./view.js";
+import * as model from '../model.js'
 class recipeView extends view{
     _parentElement=document.querySelector('.recipieDescription');
     // _data;
@@ -21,7 +22,7 @@ class recipeView extends view{
                </h4>
            </div>
            <div id="bookmarkbtn">
-               <img src="node_modules/bootstrap-icons/icons/bookmark.svg" alt="">
+               <img src="node_modules/bootstrap-icons/icons/${this._data.bookMarked?"bookmark-fill.svg":"bookmark.svg"}" alt="">
            </div>
        </div>
        <!--  -->
@@ -43,6 +44,27 @@ class recipeView extends view{
     }
     addHandler(handler){
         window.addEventListener('hashchange',handler)
+    }
+    addBookmark(handler){
+      this._parentElement.addEventListener('click',(e)=>{
+        const bookmarkbtn=e.target.closest('#bookmarkbtn')
+        if(!bookmarkbtn) return;
+        console.log(bookmarkbtn)
+        if(!model.state.recipe.bookMarked){
+            model.Bookmark(model.state.recipe)
+            handler()
+        }
+        else{
+            model.state.recipe.bookMarked=false
+            this.deleteBookMark(model.state.recipe.id)
+            handler()
+        }
+       })
+       
+    }
+    deleteBookMark(id){
+      const deleteIndex=model.state.bookMarks.findIndex(recipe=>recipe.recipeId==id)
+      model.state.bookMarks.splice(deleteIndex,1)
     }
     }
     
