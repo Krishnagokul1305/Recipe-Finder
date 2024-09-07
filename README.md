@@ -35,9 +35,8 @@ The **Recipe Finder App** is a JavaScript-based web application where users can 
 ```
 
 ##Technologies Used
--JavaScript (ES6): Core programming language.
--HTML5: Structure and content of the app.
--CSS: Custom styles.
--Bootstrap CSS: Styling framework for responsive design.
--npm: For managing project dependencies.
--JS Hint: JavaScript code quality tool.
+-**JavaScript (ES6)**: Core programming language.
+-**HTML5**: Structure and content of the app.
+-**CSS**: Custom styles.
+-**Bootstrap CSS**: Styling framework for responsive design.
+-**npm**: For managing project dependencies.
